@@ -2,4 +2,3 @@ node_modules/
 *.log
 res/js/
 res/css/
-public/
