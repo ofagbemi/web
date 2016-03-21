@@ -13,5 +13,7 @@ var stream = fs.createWriteStream(OUT_PATH)
         console.log('Wrote js to %s', OUT_PATH);
     });
 
-browserify([IN_PATH]).bundle()
+browserify([IN_PATH]).transform({
+  global: true
+}, 'uglifyify').bundle()
 .pipe(stream);
