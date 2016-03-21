@@ -2,7 +2,7 @@
   "name": "jare-web",
   "version": "0.0.1",
   "scripts": {
-    "start": "node bin/build-css.js;node bin/build-js.js;node server.js"
+    "start": "rm -rf res/js/; rm -rf res/css/; mkdir res/js; mkdir res/css; node bin/build-css.js;node bin/build-js.js;node server.js"
   },
   "dependencies": {
     "async": "^2.0.0-rc.1",
