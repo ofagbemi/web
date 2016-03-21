@@ -17,6 +17,7 @@
     "node-sass": "^3.4.2",
     "path": "^0.12.7",
     "postcss": "^5.0.19",
+    "uglifyify": "^3.0.1",
     "underscore": "^1.8.3"
   }
 }
