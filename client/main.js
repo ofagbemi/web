@@ -1,5 +1,4 @@
 var $ = require('jquery');
-require('jquery.scrollto');
 var _ = require('underscore');
 
 var $window = $(window);
