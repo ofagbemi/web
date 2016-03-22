@@ -7,10 +7,24 @@ section#work {
     padding: 3em;
   }
 
-  > h2 {
-    margin: 5em 0;
-    text-align: center;
-    font-size: 1em;
-    font-style: italic;
+  > section {
+    padding: 5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.mission-control {
+
+      background-color: #596065;
+
+      > .copy > h2, > .copy > p {
+        color: white;
+      }
+    }
+
+    > .copy {
+      width: 497px;
+      margin: 2em;
+    }
   }
 }
