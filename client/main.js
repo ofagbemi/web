@@ -32,5 +32,3 @@ function handleScrollable(e) {
 
 $window.on('scroll', _.throttle(handleScrollable, 100));
 $window.on('scroll', _.throttle(handleScrollNav, 100));
-
-require('../partials/device/device');
