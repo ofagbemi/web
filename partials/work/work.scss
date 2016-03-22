@@ -13,6 +13,7 @@ section#work {
     justify-content: center;
     align-items: center;
 
+
     &.mission-control {
 
       background-color: #596065;
@@ -25,6 +26,17 @@ section#work {
     > .copy {
       width: 497px;
       margin: 2em;
+
+      transform: translate(0, -40%);
+      opacity: 0;
+      transition: transform $in-out-bezier 0.5s, opacity ease-out 0.3s;
+    }
+
+    &.scroll {
+      > .copy {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
     }
   }
 }
