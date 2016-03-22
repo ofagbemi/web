@@ -21,10 +21,12 @@ function handleScrollNav(e) {
 
 var $scrollables = $('[data-scroll-to]');
 function handleScrollable(e) {
-  var position = $window.scrollTop();
+  var scrollPosition = $window.scrollTop();
+  var windowHeight = window.innerHeight;
   $scrollables.each(function() {
     var $this = $(this);
-    if ($this.position().top < position + $this.height()/2) {
+    var midpoint = ($this.position().top + $this.height()/2);
+    if  (midpoint < scrollPosition + windowHeight) {
       $this.addClass('scroll');
     }
   });
