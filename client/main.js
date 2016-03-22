@@ -1,14 +1,11 @@
 var $ = require('jquery');
-require('jquery.scrollto');
 var _ = require('underscore');
 
 var $window = $(window);
 var $nav = $('#nav');
-var $sections = $('#container > section');
 
-function handleScroll(e) {
+function handleScrollNav(e) {
   var position = $window.scrollTop();
-
   if (position > $nav.height()) {
     $nav.addClass('hidden');
     setTimeout(function() {
@@ -20,8 +17,12 @@ function handleScroll(e) {
   } else if (position === 0) {
     $nav.removeClass('secondary');
   }
+}
 
-  $sections.each(function() {
+var $scrollables = $('[data-scroll-to]');
+function handleScrollable(e) {
+  var position = $window.scrollTop();
+  $scrollables.each(function() {
     var $this = $(this);
     if ($this.position().top < position + $this.height()/2) {
       $this.addClass('scroll');
@@ -29,4 +30,7 @@ function handleScroll(e) {
   });
 }
 
-$window.on('scroll', _.throttle(handleScroll, 100));
+$window.on('scroll', _.throttle(handleScrollable, 100));
+$window.on('scroll', _.throttle(handleScrollNav, 100));
+
+require('../partials/device/device');
