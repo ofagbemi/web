@@ -1,14 +1,9 @@
 section#splash {
-  background-image: url('/res/images/field.jpg');
   background-size: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
-  padding: 12em 0 16em 0;
-
-  @include hdpi {
-    background-image: url('/res/images/field@2x.jpg');
-  }
-
+  padding: 10em 0 22em 0;
+  
   > h1 {
     text-align: center;
     margin-bottom: 11px;

@@ -1,6 +1,5 @@
 section#work {
   > header {
-    background-color: #fcf4f4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,21 +12,11 @@ section#work {
     justify-content: center;
     align-items: center;
 
-
-    &.mission-control {
-
-      background-color: #596065;
-
-      > .copy > h2, > .copy > p {
-        color: white;
-      }
-    }
-
     > .copy {
       width: 497px;
       margin: 2em;
 
-      transform: translate(0, -40%);
+      transform: translate(0, 20px);
       opacity: 0;
       transition: transform $in-out-bezier 0.5s, opacity ease-out 0.3s;
 
@@ -38,7 +27,7 @@ section#work {
           margin-right: 11px;
           font-weight: 500;
           font-size: 1.1em;
-          color: white;
+          color: $link-color;
           text-decoration: none;
 
           @include mq($min-width: 768px) {
