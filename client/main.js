@@ -7,14 +7,8 @@ var $nav = $('#nav');
 function handleScrollNav(e) {
   var position = $window.scrollTop();
   if (position > $nav.height()) {
-    $nav.addClass('hidden');
-    setTimeout(function() {
-      $nav.addClass('secondary');
-      setTimeout(function() {
-        $nav.removeClass('hidden');
-      });
-    });
-  } else if (position === 0) {
+    $nav.addClass('secondary');
+  } else {
     $nav.removeClass('secondary');
   }
 }
