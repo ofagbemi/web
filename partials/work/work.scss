@@ -1,13 +1,17 @@
 section#work {
+  // to get the full work section viewable when the nav
+  // comes down
+  padding-top: $nav-height;
+
   > header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3em;
+    padding: 3em 0 5em 0;
   }
 
   > section {
-    padding: 5em 0;
+    padding: 0 0 5em 0;
     display: flex;
     justify-content: center;
     align-items: center;
