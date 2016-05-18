@@ -8,8 +8,9 @@ header#nav {
     align-items: center;
     justify-content: center;
     height: $nav-height;
+    background-color: white;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -17,13 +18,14 @@ header#nav {
     > .inner {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
       height: 100%;
       width: 100%;
 
       > a {
+        font-size: 14px;
         margin: 0 24px;
-        font-weight: 400;
+        font-weight: 300;
         color: inherit;
         text-decoration: none;
         opacity: 0.8;
@@ -36,19 +38,9 @@ header#nav {
       }
     }
 
-    &.hidden {
-      opacity: 0;
-      transform: translate(0, -100%);
-      transition: none;
-    }
-
     &.secondary {
-      position: fixed;
-      background-color: white;
       box-shadow: 0 2px 11px rgba(162, 182, 184, 0.2);
-      opacity: 1;
-      transform: translate(0, 0);
-      transition: transform ease-out 0.3s, opacity 0.3s ease-out;
+      transition: box-shadow ease-out 0.3s;
     }
   }
 }
