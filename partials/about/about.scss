@@ -11,14 +11,14 @@ section#about {
   padding: (5em + $nav-height) 3em 10em 3em;
 
   @include mq($min-width: 768px) {
-    padding: (5em + $nav-height) 6em 22em 6em;
+    padding: (5em + $nav-height) 14em 22em 14em;
   }
 
   > .copy {
     width: 497px;
     max-width: 100%;
 
-    transform: translate(0, -40%);
+    transform: translate(0, 20px);
     opacity: 0;
     transition: transform $in-out-bezier 0.5s, opacity ease-out 0.3s;
   }
